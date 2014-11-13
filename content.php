@@ -6,12 +6,8 @@
 <div class="<?php odd_even(); ?>">
 <div class="container">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-	<?php if ( has_post_thumbnail()) : ?>
    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-   <?php echo get_the_post_thumbnail( $post_id, 'thumbnail', array( 'class' => 'alignleft' ) ); ?>
    </a>
- <?php endif; ?>
 
 	<header class="entry-header">
 
@@ -28,7 +24,7 @@
 
 
 	<div class="entry-content">
-		
+		<?php echo get_the_post_thumbnail( $post_id, 'thumbnail', array( 'class' => 'alignleft' ) ); ?>
 		<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'brosco' ) ); ?>
 		<?php
 			wp_link_pages( array(
