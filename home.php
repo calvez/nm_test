@@ -16,17 +16,14 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php $my_query = new WP_Query('page_id=462');
-			while ($my_query->have_posts()) : $my_query->the_post();
-			$do_not_duplicate = $post->ID;?>
 
-			    <div class="entry">
+<?php
+  $home_page_post_id = 462;
+  $home_page_post = get_post( $home_page_post_id, ARRAY_A );
+  $content_home = $home_page_post['post_content'];
+  echo $content_home;
+?>
 
-			        <?php the_content('read more &raquo;'); ?>
-
-			    </div>
-
-			 <?php endwhile; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
