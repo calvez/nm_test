@@ -76,6 +76,7 @@ get_header(); ?>
 					endif;
 				?>
 			</header><!-- .page-header --> 
+			<div class="container-archive">
 			<div class="row mt centered">
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>

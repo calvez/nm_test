@@ -3,7 +3,7 @@
  * @package brosco
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('col-lg-3'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('col-lg-2 col-sm-4 col-xs-12'); ?>>
    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
    </a>
 	<div class="entry-content">
@@ -16,7 +16,11 @@
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-		<?php echo get_the_post_thumbnail( $post_id, 'thumbnail', array( 'class' => 'center' ) ); ?>
+		<?php if ( has_post_thumbnail() ) : ?>
+	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+	<?php the_post_thumbnail(); ?>
+	</a>
+<?php endif; ?>
 		<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'brosco' ) ); ?>
 		<?php
 			wp_link_pages( array(

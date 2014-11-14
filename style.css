@@ -1,5 +1,5 @@
 /*
-Theme Name: Nemzet Művésze
+Theme Name: Nemzet Művésze 2
 Theme URI: http://www.robertbrodziak.com/daily
 Author: Robert Brodziak
 Author URI: http://www.robertbrodziak.com
@@ -1084,6 +1084,11 @@ body, html {
   padding-left: 50px;
   padding-right: 50px; }
 
+.container-archive {
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px; }
+
 .content-area {
   padding-top: 50px; }
 
@@ -1210,8 +1215,8 @@ em {
   letter-spacing: 0.2em; }
 
 .home .entry-content {
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-bottom: 20px; }
 
 .home .entry-content p {
@@ -1490,8 +1495,8 @@ a.read-more:hover {
   display: none; }
 
 .archive .entry-content {
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-bottom: 20px; }
 
 .archive .entry-content p {
@@ -2180,19 +2185,7 @@ input, button, select, textarea {
     font-size: inherit;
     line-height: inherit
 }
-a {
-    color: #337ab7;
-    text-decoration: none
-}
-a:hover, a:focus {
-    color: #23527c;
-    text-decoration: underline
-}
-a:focus {
-    outline: thin dotted;
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px
-}
+
 figure {
     margin: 0
 }
