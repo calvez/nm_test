@@ -3,13 +3,11 @@
  * @package brosco
  */
 ?>
-<div class="<?php odd_even(); ?>">
-<div class="container">
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('col-lg-3'); ?>>
    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
    </a>
-
-	<header class="entry-header">
+	<div class="entry-content">
+			<header class="entry-header">
 
 		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
@@ -18,13 +16,7 @@
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
-
-
-
-
-	<div class="entry-content">
-		<?php echo get_the_post_thumbnail( $post_id, 'thumbnail', array( 'class' => 'alignleft' ) ); ?>
+		<?php echo get_the_post_thumbnail( $post_id, 'thumbnail', array( 'class' => 'center' ) ); ?>
 		<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'brosco' ) ); ?>
 		<?php
 			wp_link_pages( array(
@@ -66,5 +58,3 @@
 
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
-</div>
-</div>
