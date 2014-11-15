@@ -76,8 +76,8 @@ get_header(); ?>
 					endif;
 				?>
 			</header><!-- .page-header --> 
-			<div class="container-archive">
-			<div class="row mt centered row-eq-height">
+                <div class="container-fluid ">
+                    <div class="row row-fluid row-eq-height">
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php
@@ -100,5 +100,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+

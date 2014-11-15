@@ -15,36 +15,16 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+
+
 <?php
-$my_id = 462;
-$post_id_1 = get_post($my_id);
-$title = $post_id_1->post_title;
-echo '<h1>' . $title . '</h1>';
-?>
-		<?php if ( have_posts() ) : ?>
+if ( is_home() && !is_paged() ) {
+    // This is the blog posts index
+    get_template_part( 'featured' );
+} ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part('content'	);
-				?>
-
-			<?php endwhile; ?>
-
-		<?php else : ?>
-
-
-			<?php get_template_part( 'content', 'none' ); ?>
-
-		<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

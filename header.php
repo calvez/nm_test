@@ -28,16 +28,6 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'brosco' ); ?></a>
 
 
-<?php
-if ( is_home() && !is_paged() ) {
-    // This is the blog posts index
-    get_template_part( 'featured' );
-} ?>
-
-
-
-
-
 	<header id="masthead" class="site-header" role="banner">
 		<div class="header-inside">
 
