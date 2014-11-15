@@ -76,8 +76,8 @@ get_header(); ?>
 					endif;
 				?>
 			</header><!-- .page-header --> 
-			<div class="row row-centered">
-			
+			<div class="container-archive">
+			<div class="row mt centered row-eq-height">
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php
@@ -88,6 +88,9 @@ get_header(); ?>
 					get_template_part( 'content', get_post_format() );
 				?>
 			<?php endwhile; ?>
+			<div class="container">
+			<?php brosco_paging_nav(); ?>
+			</div>
 		<?php else : ?>
 
 			<?php get_template_part( 'content', 'none' ); ?>
