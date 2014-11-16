@@ -1130,7 +1130,8 @@ h4 {
   font-size: 0.875em; }
 
 .entry-content h1 {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  min-height: 10rem; }
 
 .entry-content h2 {
   margin-bottom: 20px; }
@@ -1159,8 +1160,8 @@ em {
 14. Blog
 --------------------------------------------------------------*/
 .post {
-  padding-top: 70px;
-  padding-bottom: 70px; }
+  padding-top: 20px;
+  padding-bottom: 20px; }
 
 .attachment-post-thumbnail {
   margin: 0 auto 35px;
@@ -1971,7 +1972,7 @@ and (max-device-width : 600px) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) {
 /* Styles */
-.masonry-entry{width:50%}
+.masonry-entry{width:25%}
 }
 
 /* iPads (landscape) ----------- */
@@ -1980,7 +1981,7 @@ and (min-device-width : 768px)
 and (max-device-width : 1023px) 
 and (orientation : landscape) {
 /* Styles */
-.masonry-entry{width:50%}
+.masonry-entry{width:25%}
 }
 
 /* iPads (portrait) ----------- */
@@ -1989,7 +1990,7 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px) 
 and (orientation : portrait) {
 /* Styles */
-.masonry-entry{width:50%}
+.masonry-entry{width:25%}
 }
 
 /* Desktops and laptops ----------- */
@@ -2004,4 +2005,10 @@ and (min-width : 1140px) {
 and (min-width : 1824px) {
 /* Styles */
 .masonry-entry{width:16.66666666666667%}
+}
+
+@media only screen 
+and (min-device-width : 980px) 
+and (max-device-width : 1139px) {
+  .masonry-entry{width:25%}
 }
