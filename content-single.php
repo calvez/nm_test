@@ -14,7 +14,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php echo get_the_post_thumbnail( $post_id, 'thumbnail', array( 'class' => 'alignleft' ) ); ?>
+		<?php echo get_the_post_thumbnail( $post_id, 'category-thumb', array( 'class' => 'alignleft' ) ); ?>
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(

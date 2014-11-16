@@ -1,5 +1,5 @@
 /*
-Theme Name: Nemzet Művésze 2
+Theme Name: Nemzet Művésze v0.3
 Theme URI: http://www.robertbrodziak.com/daily
 Author: Robert Brodziak
 Author URI: http://www.robertbrodziak.com
@@ -1990,14 +1990,14 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px) 
 and (orientation : portrait) {
 /* Styles */
-.masonry-entry{width:50%}
+.masonry-entry{width:25%}
 }
 
 /* Desktops and laptops ----------- */
 @media only screen 
-and (min-width : 1224px) {
+and (min-width : 1140px) {
 /* Styles */
-.masonry-entry{width:25%}
+.masonry-entry{width:20%}
 }
 
 /* Large screens ----------- */

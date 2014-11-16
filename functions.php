@@ -39,7 +39,7 @@ function brosco_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-    add_image_size( 'category-thumb', 9999, 400 ); //400 pixels wide (and unlimited wide)
+    add_image_size( 'category-thumb', 500, 750, true ); //400 pixels wide (and unlimited wide)
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -75,7 +75,7 @@ add_action( 'after_setup_theme', 'brosco_setup' );
 
 
 function nm_adding_masonry() {
-wp_register_script('masonry', get_template_directory_uri() . '/js/masonry.min.js', array('jquery'),'1.1', true);
+wp_register_script('masonry', get_template_directory_uri() . '/js/isotope.min.js', array('jquery'),'1.1', true);
 wp_enqueue_script('masonry');
 }
 
