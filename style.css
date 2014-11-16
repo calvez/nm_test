@@ -1933,7 +1933,6 @@ h1.dark-text {
   Masonry
 
 */
-.masonry-entry{width:20%}
 
 /*
  * Author: http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
@@ -1978,7 +1977,7 @@ and (max-device-width : 1024px) {
 /* iPads (landscape) ----------- */
 @media only screen 
 and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
+and (max-device-width : 1023px) 
 and (orientation : landscape) {
 /* Styles */
 .masonry-entry{width:50%}
@@ -1990,19 +1989,19 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px) 
 and (orientation : portrait) {
 /* Styles */
-.masonry-entry{width:25%}
+.masonry-entry{width:50%}
 }
 
 /* Desktops and laptops ----------- */
 @media only screen 
 and (min-width : 1140px) {
 /* Styles */
-.masonry-entry{width:20%}
+.masonry-entry{width:16.66666666666667%}
 }
 
 /* Large screens ----------- */
 @media only screen 
 and (min-width : 1824px) {
 /* Styles */
-.masonry-entry{width:20%}
+.masonry-entry{width:16.66666666666667%}
 }
