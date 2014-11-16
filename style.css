@@ -6,7 +6,6 @@ Author URI: http://www.robertbrodziak.com
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Template: daily
 
 Daily is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
 
@@ -2986,3 +2985,90 @@ tbody.collapse.in {
     position: fixed
 }
 
+/*
+
+  Masonry scripts
+
+*/
+
+
+/* Masonry container */
+body.blog div#content, body.archive div#content {
+-moz-column-count: 6;
+-webkit-column-count: 6;
+column-count: 6;
+-moz-column-gap: 1em;
+-webkit-column-gap: 1em;
+column-gap: 1em;
+}
+
+/* Masonry bricks or child elements */
+
+body.blog article, body.archive article {
+background-color: #eee;
+display: inline-block;
+margin: 0 0 1em;
+padding: 1em;
+width: 100%;
+}
+
+body.archive .archive-header, body.blog .paging-navigation, body.archive .paging-navigation {
+background-color: #ffffff;
+-webkit-column-span: all;
+column-span: all;
+}
+
+/* Some ad hoc CSS useful for many themes */
+body.archive .site-content,
+body.blog .site-content {
+margin: 1em;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+-ms-word-wrap: break-word;
+word-wrap: break-word;
+}
+@media only screen and (max-width : 1466px) {
+
+body.blog div#content, body.archive div#content { /* Masonry container */
+-moz-column-count: 4;
+-webkit-column-count: 4;
+column-count: 4;
+}
+}
+
+@media only screen and (max-width : 1024px) {
+
+body.blog div#content, body.archive div#content { /* Masonry container */
+-moz-column-count: 3;
+-webkit-column-count: 3;
+column-count: 3;
+}
+}
+
+@media only screen and (max-device-width : 1024px) and (orientation : portrait) {
+
+body.blog div#content, body.archive div#content { /* Masonry container */
+-moz-column-count: 2;
+-webkit-column-count: 2;
+column-count: 2;
+}
+}
+
+@media only screen and (max-width : 768px) {
+
+body.blog div#content, body.archive div#content { /* Masonry container */
+-moz-column-count: 2;
+-webkit-column-count: 2;
+column-count: 2;
+}
+}
+
+@media only screen and (max-width : 501px) {
+
+body.blog div#content, body.archive div#content { /* Masonry container */
+-moz-column-count: 1;
+-webkit-column-count: 1;
+column-count: 1;
+}
+}
