@@ -11,9 +11,6 @@ get_header(); ?>
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-		<?php if ( have_posts() ) : ?>
-
 			<header class="page-header">
 				<!--<h1 class="page-title">
 					<?php
@@ -76,10 +73,10 @@ get_header(); ?>
 					endif;
 				?>
 			</header><!-- .page-header --> 
-                <div class="container-fluid ">
-                    <div class="row row-fluid row-eq-height">
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+					<?php if ( have_posts() ) : ?>
+					<div id="masonry-loop">
+					    <?php /* The loop */ ?>
+					    <?php while ( have_posts() ) : the_post(); ?>
 				<?php
 					/* Include the Post-Format-specific template for the content.
 					 * If you want to override this in a child theme, then include a file
@@ -87,17 +84,27 @@ get_header(); ?>
 					 */
 					get_template_part( 'content', get_post_format() );
 				?>
-			<?php endwhile; ?>
-			<div class="container">
-			<?php brosco_paging_nav(); ?>
-			</div>
-		<?php else : ?>
+					    <?php endwhile; ?>
+					</div><!--/#masonry-loop-->
 
-			<?php get_template_part( 'content', 'none' ); ?>
-
-		<?php endif; ?>
-	</div>
+					<?php else : ?>
+					    <?php get_template_part( 'content', 'none' ); ?>
+					<?php endif; ?>
 		</main><!-- #main -->
 	</section><!-- #primary -->
+	<?php get_footer(); ?>
+
+	<script>
+    //set the container that Masonry will be inside of in a var
+    var container = document.querySelector('#masonry-loop');
+    //create empty var msnry
+    var msnry;
+    // initialize Masonry after all images have loaded
+    imagesLoaded( container, function() {
+        msnry = new Masonry( container, {
+            itemSelector: '.masonry-entry'
+        });
+    });
+</script>
 
 

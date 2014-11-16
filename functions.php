@@ -68,45 +68,22 @@ endif; // brosco_setup
 add_action( 'after_setup_theme', 'brosco_setup' );
 
 /**
- * Register widget area.
- *
- * @link http://codex.wordpress.org/Function_Reference/register_sidebar
- */
-function brosco_widgets_init() {
-
-	register_sidebar( array(
-		'name'          => __( 'Footer 1', 'brosco' ),
-		'id'            => 'footer-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
-	register_sidebar( array(
-		'name'          => __( 'Footer 2', 'brosco' ),
-		'id'            => 'footer-2',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
-	register_sidebar( array(
-		'name'          => __( 'Footer 3', 'brosco' ),
-		'id'            => 'footer-3',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
-}
-add_action( 'widgets_init', 'brosco_widgets_init' );
-
-/**
  * Enqueue scripts and styles.
  */
+
+/* masonry */
+
+
+function nm_adding_masonry() {
+wp_register_script('masonry', get_template_directory_uri() . '/js/masonry.min.js', array('jquery'),'1.1', true);
+wp_enqueue_script('masonry');
+}
+
+add_action( 'wp_enqueue_scripts', 'nm_adding_masonry' );  
+
+
+/*	end masonry */
+
 function brosco_scripts() {
 	wp_enqueue_style( 'brosco-style', get_stylesheet_uri() );
 
